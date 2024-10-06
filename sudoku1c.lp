@@ -13,3 +13,5 @@ sudoku(X,Y,N):-initial(X,Y,N).
 subgrid(X,Y,W):-X=1..(n*n),Y=1..(n*n),W=1+(((X-1)/n)*n+(Y-1)/n).
 :-sudoku(X,Y,N),sudoku(X',Y',N),subgrid(X,Y,W),subgrid(X',Y',W),W=1..(n*n),X'=1..(n*n),Y'=1..(n*n),X'!=X,Y'!=Y,W=1..(n*n).
 :-sudoku(X,Y,N),sudoku(X,Y,N'),N'=1..(n*n),N!=N'.
+
+#show sudoku/3.
